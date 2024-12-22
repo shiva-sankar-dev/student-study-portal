@@ -75,6 +75,67 @@
             </div>
         </nav>
     </header>
+    <style>
+        .container{
+            height: 750px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .top-1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 40px;
+            width: 90%;
+        }
+        .handbook{
+            height: 200px;
+            width: 100%;
+            background-color: yellow;
+            position: relative;
+        }
+
+        .handbook p{
+            position: absolute;
+            background-color: violet;
+            top: 50%;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            margin: 0;
+            
+        }
+
+        .handbook p span{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <div class="container">
+        <div class="top-1">
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        <div class="handbook">
+            <p><span>handbook</span></p>
+        </div>
+        </div>
+
+    </div>
     <script>
         openLogout = document.getElementById('user-name');
         logout = document.getElementById('logout-menu');
