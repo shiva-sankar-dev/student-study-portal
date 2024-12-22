@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Portal</title>
+    <style>
+        body {
+            background-color: rgba(232, 233, 239, 1);
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 7vh;
+            background-color: white;
+            border-bottom: 0.3px solid rgba(75, 95, 172, 1);
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgba(75, 95, 172, 1);
+        }
+
+        .login-user {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .user-name {
+            font-size: 1.2em;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logout {
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: white;
+            border: 1px solid rgba(75, 95, 172, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 100;
+        }
+
+        .logout a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+            display: block;
+            padding: 5px 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Student Study Portal
+            </div>
+            <div class="login-user">
+                <div class="user-name" id="user-name" >username</div>
+                <div class="logout" id="logout-menu">
+                    <a href="">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        openLogout = document.getElementById('user-name');
+        logout = document.getElementById('logout-menu');
+        openLogout.addEventListener('click',() => {
+            if (logout.style.display === 'block') {
+                logout.style.display = 'none';
+            } else {
+                logout.style.display = 'block';
+            }
+        })
+        window.addEventListener('click',(event) => {
+            if (event.target != logout && event.target != openLogout){
+                logout.style = 'none'
+            }
+        })
+    </script>
+</body>
+</html>
