@@ -1,0 +1,119 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<style>
+    .handbook-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .handbook-section{
+        column-count: 6;
+        column-gap: 15px;
+        margin-top: 50px;
+        
+    }
+
+
+    .handbooks{
+        border-radius: 12px;
+        min-height: 150px;
+        max-height: 450px;
+        border:1px solid black;
+        width: 230px;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+        break-inside: avoid;
+        padding: 12px;
+        cursor: pointer;
+        transition: ease 0.5s;
+        box-sizing: border-box;
+        overflow: hidden; /* Prevents overflow */
+        line-height: 1.5; /* Adjust to control spacing between lines */
+    }
+    .handbooks:hover{
+        transform: scale(1.01);
+    }
+
+</style>
+
+{% comment %} <div class="handbook-container">
+    <div class="add-button">
+        <button>add</button>
+    </div>
+    <div class="handbook-section">
+        <div class="handbooks"><p>Lor esse siveniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consecipsum dolor sit amet consectetur adipisicing elit. ConsectetuLorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullamr ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam delectus beatae, eligendi deleniti earum expedita reiciendis. Quas?</p></div>
+        <div class="handbooks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+        <div class="handbooks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+        <div class="handbooks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+        <div class="handbooks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+        <div class="handbooks">11111Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+        <div class="handbooks">11111Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam laudantium esse similique, incidunt illum, ducimus aut reiciendis facilis, amet doloribus enim nulla nihil assumenda asperiores perspiciatis sapiente non laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo qui accusamus veniam iure enim voluptate id laborum maxime cum veritatis ullam</div>
+    </div>
+</div> {% endcomment %}
+
+<style>
+    .modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        height: 93vh;
+    }
+
+    .modal-content{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        width: 600px;
+        align-items: center;
+        max-height: 80vh;
+        overflow: hidden;
+    }
+    input {
+        width: 90%;
+        margin-top: 20px;
+        height: 30px;
+    }
+
+    textarea{
+        width: 90%;
+        margin-top: 8px;
+        resize: none;
+        min-height:100px ;
+        margin-bottom: 30px;
+        overflow-y: hidden;
+    }
+</style>
+
+<div class="modal">
+    <div class="modal-content" id="modalContent">
+        <input type="text">
+        <hr style="color: black;width: 100%;margin-top: 8px;">
+        <textarea id="dynamic-textarea" placeholder="Type here..."></textarea>
+    </div>
+</div>
+<script>
+    const modalUpdate = document.getElementById('dynamic-textarea')
+    const modalContent = document.getElementById('modalContent')
+    modalUpdate.addEventListener('input', () => {
+        modalUpdate.style.height = 'auto'
+        modalUpdate.style.height = `${modalUpdate.scrollHeight}px`
+        modalContent.style.height = 'auto'
+        modalContent.style.height = `${modalContent.scrollHeight}px`
+    })
+
+
+    
+</script>
+{% endblock content %}

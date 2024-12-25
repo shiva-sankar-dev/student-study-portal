@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Study Portal</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
         body {
             background-color: rgba(232, 233, 239, 1);
             padding: 0;
@@ -20,6 +24,7 @@
             background-color: white;
             border-bottom: 0.3px solid rgba(75, 95, 172, 1);
             padding: 0 25px;
+            box-sizing: border-box;
         }
 
         .logo {
@@ -75,67 +80,13 @@
             </div>
         </nav>
     </header>
-    <style>
-        .container{
-            height: 750px;
-            background-color: red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .top-1{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 40px;
-            width: 90%;
-        }
-        .handbook{
-            height: 200px;
-            width: 100%;
-            background-color: yellow;
-            position: relative;
-        }
 
-        .handbook p{
-            position: absolute;
-            background-color: violet;
-            top: 50%;
-            width: 100%;
-            left: 50%;
-            transform: translate(-50% , -50%);
-            margin: 0;
-            
-        }
 
-        .handbook p span{
-            display: flex;
-            justify-content: center;
-        }
-    </style>
-    <div class="container">
-        <div class="top-1">
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        <div class="handbook">
-            <p><span>handbook</span></p>
-        </div>
-        </div>
+    {% block content %}
+    
+    {% endblock content %}
 
-    </div>
+
     <script>
         openLogout = document.getElementById('user-name');
         logout = document.getElementById('logout-menu');
